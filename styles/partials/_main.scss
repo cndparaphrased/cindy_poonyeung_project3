@@ -6,26 +6,24 @@
     margin: 0;
     padding: 0;
     appearance: none;
-}
-
-input[type="radio"] {
     display: none;
 }
 
-.slide-content__items input:active +.logos,
-.slide-content__items input:active +.feels__boxes {
+input[type="radio"]:checked + label,
+.slide-content__items input:active + .logos,
+.slide-content__items input:active + .feels__boxes {
     opacity: .5;
 }
 
-.slide-content__items input:checked +.logos,
-.slide-content__items input:checked +.feels__boxes {
+.slide-content__items input:checked + .logos,
+.slide-content__items input:checked + .feels__boxes {
     filter: none;
 }
 
 .logos {
     background-size: contain;
     background-repeat: no-repeat;
-    display: flex;
+    display: block;
     width: 100%;
     height: 12rem;
     transition: all 100ms ease-in;
@@ -34,7 +32,7 @@ input[type="radio"] {
 }
 
 .logos:hover,
-.slide-content__items .feels__boxes:hover {
+.slide-content__items .feels__boxes:hover, {
     filter: opacity(.5);
 }
 
@@ -94,13 +92,12 @@ input[type="radio"] {
     background-color: #FFCD5A;
 }
 
-
 // = = = = = = = = = = = = = = = 
 // MAIN FRAME - SLIDER STYLES
 // = = = = = = = = = = = = = = = 
 
 .slide-content {
-    margin: 50px 0 25px 0;
+    margin: 25px 0;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -108,26 +105,31 @@ input[type="radio"] {
 }
 
 .slide-content__items {
-    flex: 0 2 calc(20% - 40px);
+    flex-basis: calc(20% - 40px);
     margin: 20px;
 }
 
-.results {
+.results--active {
+    margin: 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+// = = = = = = = = = = = = = = = 
 // BUTTON STYLES
+// = = = = = = = = = = = = = = = 
+
 .button {
     background: none;
     border: none;
     text-transform: uppercase;
     font-size: 2.4rem;
     letter-spacing: .2rem;
-    color: #888;
+    color: #777;
     transition: color 0.3s linear;
+    outline: none;
 }
 
 .button:hover {
@@ -136,6 +138,7 @@ input[type="radio"] {
 
 .button--refresh {
     margin: 20px;
+    text-align: center;
 }
 
 // NAVIGATION 
@@ -146,7 +149,6 @@ input[type="radio"] {
     margin: 0 auto;
     border-top: 5px solid #333;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -155,9 +157,10 @@ input[type="radio"] {
     font-size: 2.4rem;
     letter-spacing: .2rem;
     padding: 40px;
-    color: #888;
+    color: #777;
     outline: none;
     transition: color 0.3s linear;
+    width: 100%;
 }
 
 .slider-nav a::before,
@@ -165,7 +168,7 @@ input[type="radio"] {
     content: "";
     position: absolute;
     top: -5px;
-    left: 50%;
+    left: 83%;
     width: 0;
     height: 0;
     border: solid transparent;

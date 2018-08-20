@@ -220,7 +220,7 @@ $(function() {
         
         const feeling = $('input[name=feels]:checked').val();
 
-        $('.slide-content').detach();
+        $('.tv-show, .feels, h3').detach();
 
         for (let x in possibleResults) {
             if (x === show) {
@@ -232,6 +232,7 @@ $(function() {
 
                         const refreshButton = `<a href="index.html" class="button button--refresh">Gif Me Another</a>`
 
+                        $('ul.results').addClass('results--active');
                         $('ul.results').append(image, refreshButton);
                     };
                 };
