@@ -275,16 +275,8 @@ input[type="radio"] {
 .yay {
   background-color: #FFCD5A; }
 
-.slider {
-  position: relative;
-  margin-top: 25px;
-  height: 70vh; }
-
 .slide-content {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  overflow: hidden;
+  margin: 50px 0 25px 0;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -295,12 +287,6 @@ input[type="radio"] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-
-.tv-show {
-  bottom: 300px; }
-
-.feels {
-  bottom: 150px; }
 
 .slide-content__items {
   -webkit-box-flex: 0;
@@ -342,7 +328,6 @@ input[type="radio"] {
 
 .slider-nav {
   position: relative;
-  top: 400px;
   text-align: center;
   margin: 0 auto;
   border-top: 5px solid #333;

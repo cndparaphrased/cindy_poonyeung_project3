@@ -12,10 +12,6 @@ input[type="radio"] {
     display: none;
 }
 
-// .slider .tv-show {
-//     display: none;
-// }
-
 .slide-content__items input:active +.logos,
 .slide-content__items input:active +.feels__boxes {
     opacity: .5;
@@ -103,30 +99,12 @@ input[type="radio"] {
 // MAIN FRAME - SLIDER STYLES
 // = = = = = = = = = = = = = = = 
 
-.slider {
-    position: relative;
-    margin-top: 25px;
-    height: 70vh;
-}
-
 .slide-content {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    overflow: hidden;
+    margin: 50px 0 25px 0;
     text-align: center;
-    // pointer-events: none;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.tv-show {
-    bottom: 300px;
-}
-
-.feels {
-    bottom: 150px;
 }
 
 .slide-content__items {
@@ -164,7 +142,6 @@ input[type="radio"] {
 
 .slider-nav {
     position: relative;
-    top: 400px;
     text-align: center;
     margin: 0 auto;
     border-top: 5px solid #333;
